@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+<web>BBCode</web>
+<name>CategoryClassSheet</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent>BBCode.CategoryClass</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1202764832000</creationDate>
+<date>1256130248000</date>
+<contentUpdateDate>1256130248000</contentUpdateDate>
+<version>1.2</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment>Added object</comment>
+<minorEdit>true</minorEdit>
+<syntaxId>xwiki/2.0</syntaxId>
+<hidden>false</hidden>
+<object>
+<class>
+<name>XWiki.SheetClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<defaultEditMode>
+<name>defaultEditMode</name>
+<number>1</number>
+<prettyName>Default Edit Mode</prettyName>
+<size>15</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</defaultEditMode>
+</class>
+<name>BBCode.CategoryClassSheet</name>
+<number>0</number>
+<className>XWiki.SheetClass</className>
+<guid>e5a0bcc4-9a2d-4cc9-99ea-e766e2855bbb</guid>
+<property>
+<defaultEditMode></defaultEditMode>
+</property>
+</object>
+<object>
+<class>
+<name>XWiki.TagClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<tags>
+<cache>0</cache>
+<displayType>checkbox</displayType>
+<multiSelect>1</multiSelect>
+<name>tags</name>
+<number>1</number>
+<prettyName>Tags</prettyName>
+<relationalStorage>1</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<values></values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</tags>
+</class>
+<name>BBCode.CategoryClassSheet</name>
+<number>0</number>
+<className>XWiki.TagClass</className>
+<guid>7e849669-0a78-4ff1-afca-f96e701be6b4</guid>
+<property>
+<tags/>
+</property>
+</object>
+<content>{{velocity filter="indent"}}
+#set($ok = $xwiki.ssx.use("BBCode.Skin"))
+#set ($docextras = [])
+#if($request.parent &amp;&amp; $request.parent!="")
+  #set($parent=$request.parent) 
+#else
+  #set($parent=$doc.parent)
+#end
+#set($class = $doc.getObject("BBCode.CategoryClass").xWikiClass)
+{{html clean="true" wiki="false"}}
+  &lt;input type="hidden" name="parent" value="$parent" /&gt;
+  &lt;input type="hidden" name="title" value="$doctitle" /&gt;
+  &lt;div class="bbbigbox"&gt;
+  #if($context.action == 'inline')
+    &lt;label for="BBCode.CategoryClass_0_categoryname"&gt;$msg.get("bb_enternamecategory")&lt;/label&gt;&lt;br /&gt; ##$doc.display('categoryname')
+    &lt;input type="text" value="" size="30" name="BBCode.CategoryClass_0_categoryname" id="BBCode.CategoryClass_0_categoryname"/&gt;&lt;br/&gt;&lt;br/&gt;
+    #set($newcategoryname = $request.nicecategoryname)
+    #if($newcategoryname)
+      #set($newcategoryname = $newcategoryname.replaceAll('"',"'"))
+      &lt;script type="text/javascript"&gt;
+        var nicecategoryname = "${newcategoryname}";
+      ##{{{
+        document.forms.inline["BBCode.CategoryClass_0_categoryname"].value = nicecategoryname;
+        document.forms.inline["title"].value = nicecategoryname;
+      ##}}}
+      &lt;/script&gt;
+    #end
+    &lt;label for="BBCode.CategoryClass_0_categorydescription"&gt;$msg.get("bb_enterdescriptioncategory")&lt;/label&gt;&lt;br /&gt;     
+    &lt;textarea rows="10" value="" name="BBCode.CategoryClass_0_categorydescription" id="BBCode.CategoryClass_0_categorydescription" cols="50"&gt;&lt;/textarea&gt;
+    #wysiwyg_editProperty($doc "BBCode.CategoryClass_0_categorydescription" false)
+    ##template("tagedit.vm")
+    #if($doc.isNew() == 'false')
+      #set($title = $doc.getValue('categoryname', $doc.getObject('BBCode.CategoryClass')))
+      &lt;script type="text/javascript"&gt;
+      var nicecategoryname = "${title}";
+      ##{{{
+      document.forms.inline["title"].value = nicecategoryname;
+      ##}}}
+     &lt;/script&gt;
+    #end
+  #else
+    &lt;h3 id="topic-title"&gt;
+      &lt;span class=""&gt;
+        $msg.bb_category : 
+        #if($doc.getValue('categoryname', $doc.getObject('BBCode.CategoryClass')) != "")
+          $doc.getValue('categoryname', $doc.getObject('BBCode.CategoryClass'))
+        #else
+          $doc.name
+        #end
+        #if($xwiki.hasAdminRights() == 'true')
+          &lt;span class="delete-category"&gt;
+            &lt;a class="delete-icon-link" href="$doc.getURL('view', 'deletecategory=1')"&gt;&lt;span class="delete-icon"&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="red" href="$doc.getURL('view', 'deletecategory=1')"&gt;&lt;span class="text"&gt;$msg.get("bb_deletethiscategory")&lt;/text"&lt;/a&gt;
+          &lt;/span&gt;
+        #end
+      &lt;/span&gt;
+    &lt;/h3&gt;
+    #if($xwiki.hasAdminRights() == 'true')
+      #if($request.deletecategory=="1")
+        &lt;div class="deletecategory"&gt;
+          &lt;b&gt; $msg.bb_deletecategory &lt;/b&gt; - &lt;a href="$doc.getURL('view')"&gt;$msg.bb_canceldeletion&lt;/a&gt; &lt;br /&gt;&lt;br/&gt;
+          $msg.bb_reallydeletecategory  &lt;a class="delete-icon-link" href="$doc.getURL('view', 'confirmdeletecategory=1')"&gt;&lt;span class="delete-icon"&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;a class="red" href="$doc.getURL('view', 'confirmdeletecategory=1')"&gt;$msg.bb_deletecategorydefinitely&lt;/a&gt;
+          &lt;br/&gt;
+          $msg.get("bb_deleteddocs")
+          &lt;ul&gt;
+            #if("$doc.getDisplayTitle()" != "" )
+              &lt;li&gt;&lt;a href="$doc.getURL('view')"&gt;$doc.getDisplayTitle()&lt;/a&gt;&lt;/li&gt;
+            #else
+              &lt;li&gt;&lt;a href="$doc.getURL('view')"&gt;$doc.name&lt;/a&gt;&lt;/li&gt;
+            #end
+            #set ($sql = ", BaseObject as obj where obj.name=doc.fullName and obj.className='BBCode.TopicClass' and obj.name&lt;&gt;'BBCode.TopicClassTemplate' and doc.parent='$doc.getFullName()' order by doc.date desc")
+            #set($topicpages = $xwiki.searchDocuments($sql))
+            #foreach($item in $topicpages)
+              #set($itemDoc = $xwiki.getDocument("$item")) 
+              #if("$itemDoc.getDisplayTitle()" != "")
+                &lt;li&gt;&lt;a href="$itemDoc.getURL('view')"&gt;$itemDoc.getDisplayTitle()&lt;/a&gt;&lt;/li&gt;
+              #else
+                &lt;li&gt;&lt;a href="$itemDoc.getURL('view')"&gt;$itemDoc.name&lt;/a&gt;&lt;/li&gt;
+              #end
+            #end
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      #end
+      #if($request.confirmdeletecategory=="1")
+        #set ($sql = ", BaseObject as obj where obj.name=doc.fullName and obj.className='BBCode.TopicClass' and obj.name&lt;&gt;'BBCode.TopicClassTemplate' and doc.parent='$doc.getFullName()' order by doc.date desc")
+        #set($topicpages = $xwiki.searchDocuments($sql))
+        #foreach($item in $topicpages)
+          $xwiki.getDocument("$item").delete()
+        #end
+        $xwiki.getDocument($doc.getFullName()).delete()
+        #set ($space = $doc.space)
+        #set ($home = '$space.WebHome')
+        $response.sendRedirect($xwiki.getURL($doc.getParent()))
+      #end
+    #elseif($request.confirmdeletecategory=="1" || $request.deletecategory=="1")
+      &lt;span class="red"&gt; $msg.get("bb_adminrightsrequired") &lt;/span&gt;
+    #end
+    &lt;div class="category-description"&gt;
+      $doc.getValue('categorydescription', $doc.getObject('BBCode.CategoryClass'))
+    &lt;/div&gt;
+    #if ($context.user == 'XWiki.XWikiGuest')
+      &lt;span class="bbdatatext"&gt; $msg.get("bb_needlogintopic") &lt;/span&gt;
+    #else
+      &lt;br/&gt;
+      &lt;div id="add-topic"&gt;
+        &lt;a id="add-link" onclick="$('add-form').toggle();" href="#"&gt;$msg.get("bb_addnewtopic")...&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div id="add-form" style="display:none"&gt;
+        &lt;form action="" id="newdoc" method="get"&gt;
+          &lt;input type="hidden" name="template" value="BBCode.TopicClassTemplate"/&gt;
+          &lt;input type="hidden" name="sheet" value="1"/&gt;
+          &lt;input type="hidden" name="parent" value="${doc.fullName}"&gt;
+          &lt;input type="hidden" name="space" value="${doc.space}"&gt;
+          &lt;input type="text" name="topictitle"  size="40" onblur="if(this.value=='') this.value='$msg.get('bb_topictitle')'" onfocus="if(this.value=='$msg.get('bb_topictitle')') this.value=''" style="margin: auto;"  value="$msg.bb_topictitle"/&gt;
+          &lt;input type="hidden" name="nicetopictitle" value=""/&gt;
+          &lt;input type="button" value="$msg.bb_addthistopic" onclick='this.form.nicetopictitle.value = this.form.topictitle.value; if (updateName(this.form.topictitle)) {this.form.action="../../inline/" + this.form.space.value + "/" + this.form.topictitle.value; this.form.submit(); }'/&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    #end
+    #set ($sql = ", BaseObject as obj where obj.name=doc.fullName and obj.className='BBCode.TopicClass' and obj.name&lt;&gt;'BBCode.TopicClassTemplate' and doc.parent='$doc.getFullName()' order by doc.date desc")
+    #set($topicpages = $xwiki.searchDocuments($sql))
+    #set($tagClass = $xwiki.getClass("XWiki.TagClass"))
+    #set($tagsProp = $tagClass.tags)
+    #set($sep = $tagsProp.getProperty("separator").getValue())
+    #set($cleancategorytags = $doc.tags.replaceAll("[|]", "${sep}"))
+    #set ($tags = $cleancategorytags.split("${sep}"))
+    #set($existingTags = $xwiki.arrayList)
+    #foreach($tag in $tags)
+      #set($discard = $existingTags.add($tag))
+    #end
+   &lt;table id="topiclist" class="grid sortable doOddEven bbtable" style="width:100%"&gt;
+     &lt;tr class="sortHeader"&gt;
+       &lt;th&gt;$msg.get("bb_topic")&lt;/th&gt;
+       &lt;th&gt;$msg.get("bb_createdby")&lt;/th&gt;
+       &lt;th&gt;$msg.get("bb_startedon")&lt;/th&gt;
+       &lt;th&gt;$msg.get("bb_messages")&lt;/th&gt;
+       &lt;th&gt;$msg.get("bb_lastauthor")&lt;/th&gt;
+       &lt;th&gt;$msg.get("bb_lastpost")&lt;/th&gt;
+       #if($xwiki.hasAdminRights() == 'true') &lt;th&gt;$msg.get("bb_actions")&lt;/th&gt; #end
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td style="text-align: left;" #if($xwiki.hasAdminRights() == 'true') colspan="7" #else colspan="6" #end&gt;
+         &lt;div class="tags"&gt; 
+         #if ($existingTags.size()&gt;0 &amp;&amp; $existingTags.get(0).length()&gt;0)
+           &lt;span class="bbdatatext"&gt; $msg.bb_categorytags
+           #foreach ($tag in $existingTags)
+             &lt;a href='$xwiki.getURL("WebHome")?tag=$tag'&gt; $tag &lt;/a&gt; 
+           #end
+           &lt;/span&gt;
+         #end
+         &lt;/div&gt;
+         &lt;span class="bbdatatext"&gt; $msg.bb_thereis $topicpages.size() $msg.bb_topicsundercategory &lt;/span&gt;
+       &lt;/td&gt;
+     &lt;/tr&gt;
+     #foreach ($item in $topicpages)
+       #set ($topicdoc = $xwiki.getDocument($item))
+       #set ($topicobject = $topicdoc.getObject('BBCode.TopicClass')) 
+       #set($topicclass = $topicdoc.getObjects('BBCode.PostClass'))
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;span class="bbtitle"&gt;
+          #if ($topicdoc.getValue('topictitle') != "") 
+            &lt;a href="$topicdoc.getURL('view')"&gt;$topicdoc.display('topictitle')&lt;/a&gt;
+          #else 
+            &lt;a href="$topicdoc.getURL('view')"&gt;$item&lt;/a&gt;
+          #end
+          &lt;/span&gt;
+        &lt;/td&gt;
+        &lt;td&gt; $xwiki.getUserName($topicdoc.getCreator()) &lt;/td&gt; 
+        &lt;td&gt; $xwiki.formatDate($topicdoc.getCreationDate(), 'dd/MM/yyyy') &lt;/td&gt;
+        &lt;td&gt; $topicclass.size() &lt;/td&gt;
+        &lt;td&gt; $xwiki.getUserName($topicdoc.getAuthor()) &lt;/td&gt;
+        &lt;td&gt; $xwiki.formatDate($topicdoc.getDate(), 'dd/MM/yyyy - HH:mm:ss') &lt;/td&gt;
+        #if($xwiki.hasAdminRights() == 'true')
+          &lt;td&gt;&lt;a class="delete-icon-link" href="$topicdoc.getURL("delete", "")"&gt;&lt;span class="delete-icon"&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;a class="red" href="$topicdoc.getURL("delete", "")"&gt;&lt;span class="text"&gt;$msg.get("bb_topicdelete")&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+        #end
+      &lt;/tr&gt;
+    #end
+  &lt;/table&gt;
+#end
+&lt;/div&gt;
+{{/html}}
+{{/velocity}}
+</content></xwikidoc>

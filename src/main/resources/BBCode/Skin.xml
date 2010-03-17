@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+<web>BBCode</web>
+<name>Skin</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent></parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.OanaTabaranu</contentAuthor>
+<creationDate>1202769550000</creationDate>
+<date>1251984950000</date>
+<contentUpdateDate>1251984950000</contentUpdateDate>
+<version>1.1</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/1.0</syntaxId>
+<hidden>false</hidden>
+<object>
+<class>
+<name>XWiki.JavaScriptExtension</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<cache>
+<cache>0</cache>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>cache</name>
+<number>5</number>
+<prettyName>Caching policy</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>long|short|default|forbid</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</cache>
+<code>
+<name>code</name>
+<number>2</number>
+<prettyName>Code</prettyName>
+<rows>20</rows>
+<size>50</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</code>
+<name>
+<name>name</name>
+<number>1</number>
+<prettyName>Name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+<parse>
+<displayFormType>select</displayFormType>
+<displayType>yesno</displayType>
+<name>parse</name>
+<number>4</number>
+<prettyName>Parse content</prettyName>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</parse>
+<use>
+<cache>0</cache>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>use</name>
+<number>3</number>
+<prettyName>Use this extension</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>onDemand=On demand|always=Always</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</use>
+</class>
+<name>BBCode.Skin</name>
+<number>0</number>
+<className>XWiki.JavaScriptExtension</className>
+<guid>02c47cb8-8325-44e0-b728-96af48927fd2</guid>
+<property>
+<cache>forbid</cache>
+</property>
+<property>
+<code>XWiki.bulletinboard = new Object();
+XWiki.bulletinboard.quotes = new Array();
+
+XWiki.bulletinboard.addQuote = function(quote, author, date) {
+  quote = quote.replace(/\n/g, "\n&gt; "); 
+  var formattedquote = "&gt; **" + date + ", " + author + "**:\n&gt;\n&gt; ";
+  formattedquote = formattedquote + quote + "\n\n";
+  return XWiki.bulletinboard.quotes.push(formattedquote) - 1;
+}
+
+XWiki.bulletinboard.getQuote = function(index) {
+  return XWiki.bulletinboard.quotes[index];
+}
+
+XWiki.bulletinboard.insertInReply = function(str) {
+  var reply = $("BBCode.PostClass_postcontent");
+  if (reply.value != "") {
+    reply.value = reply.value + "\n\n"; 
+  } 
+  reply.value = reply.value + str;
+}
+
+XWiki.bulletinboard.jumpToReply = function() {
+  var reply = $("BBCode.PostClass_postcontent");
+  if (window.location.hash != "reply") { 
+    window.location.hash = "reply";
+  }
+  reply.scrollTop = reply.scrollHeight;
+  reply.focus();
+}
+</code></property><property><name></name></property><property><parse>0</parse>
+</property>
+<property>
+<use>onDemand</use>
+</property>
+</object>
+<object>
+<class>
+<name>XWiki.StyleSheetExtension</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<cache>
+<cache>0</cache>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>cache</name>
+<number>5</number>
+<prettyName>Caching policy</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>long|short|default|forbid</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</cache>
+<code>
+<name>code</name>
+<number>2</number>
+<prettyName>Code</prettyName>
+<rows>20</rows>
+<size>50</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</code>
+<name>
+<name>name</name>
+<number>1</number>
+<prettyName>Name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+<parse>
+<displayFormType>select</displayFormType>
+<displayType>yesno</displayType>
+<name>parse</name>
+<number>4</number>
+<prettyName>Parse content</prettyName>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</parse>
+<use>
+<cache>0</cache>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>use</name>
+<number>3</number>
+<prettyName>Use this extension</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>onDemand=On demand|always=Always</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</use>
+</class>
+<name>BBCode.Skin</name>
+<number>0</number>
+<className>XWiki.StyleSheetExtension</className>
+<guid>8b0715f7-13a4-4f03-890f-e0509d270101</guid>
+<property>
+<cache>forbid</cache>
+</property>
+<property>
+<code>/* @override http://waterwiki.devxwiki.com/xwiki/bin/ssx/BBCode/Skin?language=en */
+.bbbigbox {
+margin: 0;
+padding: 0 0 15px 0;
+}
+.postreply textarea {
+width: 100%!important;
+}
+.postreply input{
+width: 150px;
+}
+.bbsmallbox {
+margin: 10px;
+padding: 5px 10px 5px 10px;
+border: 1px solid #CCC;
+-moz-border-radius: 8px;
+}
+.deletecategory {
+margin: 15px;
+padding: 15px;
+border: 3px solid #F00;
+-moz-border-radius: 8px;
+}
+.bbbtitle {
+font-size: 1.3em;
+line-height: 1.5em;
+}
+.bbtitle a {
+font-size: 1.3em;
+line-height: 1.5em;
+text-align: left;
+}
+.bbsmalltitle {
+font-size: 1.3em;
+line-height: 1.5em;
+color: #0169A7;
+}
+.bbbigtitle {
+font-size: 2.2em;
+color: #0169A7;
+line-height: 1.5em;
+}
+.bbdatatext {
+font-style: italic;
+background-color: #fff;
+display: block;
+padding: 3px;
+
+}
+#posttd .bbdatatext {
+font-style: italic;
+background-color: #dfe5e5;
+display: block;
+padding: 3px;
+height: 20px;
+line-height: 20px;
+}
+.avatar{
+text-align: left;
+padding: 5px;
+}
+.avatar img {
+height: 100px;
+margin-right: 1px;
+}
+.postcontent {
+padding: 10px;
+font-style: normal;
+}
+.evenpost {
+background-color: #E4F6FF;
+}
+a.red {
+color: #F00;
+}
+.red {
+color: #F00;
+}
+.bbtable td {
+text-align: left;
+}
+.bbtable th {
+line-height: 1.2em;
+font-weight: normal;
+}
+.topictable {
+width: 100%;
+border: none;
+}
+.topictable th {
+border: 1px solid #CCC;
+line-height: 1.2em;
+}
+#posttd {
+border-top: 5px solid #fff;
+vertical-align: top;
+min-width: 100px;
+background-color: #ebf1f1;
+padding: 0;
+}
+hr {
+color: #CCC;
+}
+blockquote {
+margin:0 30px 0;
+border: 1px solid #CCC;
+padding: 6px;
+background-color: #f3f9f9;
+}
+.postauthor {
+padding: 3px;
+font-weight: bold;
+background-color: #dfe5e5;
+min-height: 20px;
+line-height: 20px;
+white-space: pre;
+}
+#xwikidata .about {
+display: none!important;
+}
+/* Forum styles */
+#categorylist, #topiclist, .bbbigbox #bblist {
+  border: none;
+}
+#categorylist .sortHeader th, #topiclist .sortHeader th, .bbbigbox #bblist .sortHeader th{
+  background-color:#DDDDDD;
+  border-collapse:separate;
+  border-color:-moz-use-text-color #FFFFFF -moz-use-text-color -moz-use-text-color;
+  border-style:none solid none none;
+  border-width:0 1px 0 0;
+  color:#4D4D4D;
+  font-weight:normal;
+  font-size: 1.2em;
+  padding:3px 16px 3px 5px;
+  text-align:left;
+  white-space:nowrap;
+}
+
+
+.bbbigbox #bblist .sortHeader th{
+  font-weight:normal;
+}
+#categorylist tr, #topiclist tr, .bbbigbox #bblist tr{
+  border-bottom:1px solid #CCCCCC;
+  color: #888;
+}
+#categorylist tr .red, #topiclist tr .red, .bbbigbox .red {
+  color:#888888;
+  font-size:10px;
+  padding-bottom:3px;
+  padding-top:3px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+#categorylist tr .delete-icon, #topiclist tr .delete-icon, .bbbigbox .delete-icon{
+  background-image:url(/xwiki/resources/icons/silk/cross.gif);
+  background-position:left center;
+  background-repeat:no-repeat;
+  padding-right:0.8em;
+}
+#topic-title .delete-category{
+  padding-left: 0.5em;
+}
+#topic-title .delete-category .delete-icon-link{
+  padding-right:0;
+  line-height:0.8em;
+  font-size: 0.6em;
+}
+#topic-title .delete-category .delete-icon{
+  padding-right:0.8em;
+}
+#topic-title .delete-category .red, #topic-title .delete-category .red .text{
+  color:#888;
+}
+#categorylist tr a.delete-icon-link,
+#categorylist tr a.delete-icon-link:link,
+#categorylist tr a.delete-icon-link:visited,
+#categorylist tr a.delete-icon-link:hover,
+#categorylist tr a.delete-icon-link:active,
+#topiclist tr a.delete-icon-link,
+#topiclist tr a.delete-icon-link:link,
+#topiclist tr a.delete-icon-link:visited,
+#topiclist tr a.delete-icon-link:hover,
+#topiclist tr a.delete-icon-link:active,
+.bbbigbox a.delete-icon-link,
+.bbbigbox a.delete-icon-link:link,
+.bbbigbox a.delete-icon-link:visited,
+.bbbigbox a.delete-icon-link:hover,
+.bbbigbox a.delete-icon-link:active{
+  padding-right:0px;
+  text-decoration:none;
+  padding-right:0.3em;
+}
+#categorylist .bbtitle a, #topiclist .bbtitle a {
+  font-size: 1em;
+}
+#add-form {
+  background-color:#FCFCFC;
+  border:1px dashed #EFEFEF;
+  overflow:hidden;
+  padding:0.5em;
+}
+#add-category, #add-topic {
+  background-image:url(/xwiki/resources//icons/silk/add.gif);
+  background-repeat:no-repeat;
+  line-height:20px;
+  padding-left:20px;
+}
+#posttd {
+  background-color: #EDF3F3;
+}
+.bbdatatext {
+  color:#888;
+  font-weight:normal;
+  font-size: 1em;
+}
+#posttd .postauthor {
+  font-weight: normal;
+}
+.bbbigbox .deletecategory {
+  background-color:#EDF3F3;
+  border:0px solid #ccc;
+}
+#bb-info {
+  color:#888;
+  font-size:0.9em;
+  font-style:italic;
+  padding-top:0.4em;
+}
+.topic-category {
+  color: #888;
+}
+.topic-category a,
+.topic-category a:link,
+.topic-category a:visited,
+.topic-category a:hover,
+.topic-category a:active {
+  color: #888;
+}
+
+/* IE 6 */
+*html #categorylist tr .delete-icon, *html #topiclist tr .delete-icon, *html .bbbigbox .delete-icon{
+  padding:0px;
+  width:16px;
+}
+*html #categorylist tr a.delete-icon-link,
+*html #topiclist tr a.delete-icon-link,
+*html .bbbigbox a.delete-icon-link{
+  cursor: hand;
+}
+*html #topic-title .delete-category .delete-icon-link{
+  line-height:0.8em;
+  font-size: 0.8em;
+}
+*html #topic-title .delete-category .delete-icon{
+  padding-right:0.6em;
+}
+*html #categorylist .sortHeader th, * html #topiclist .sortHeader th {
+  font-weight:normal;
+}
+*html #categorylist td, *html  #topiclist td, *html .bbbigbox #bblist td{
+  border-bottom:1px solid #CCCCCC;
+  color: #888;
+}</code>
+</property>
+<property>
+<name></name>
+</property>
+<property>
+<parse>0</parse>
+</property>
+<property>
+<use>onDemand</use>
+</property>
+</object>
+<object>
+<class>
+<name>XWiki.TagClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<tags>
+<cache>0</cache>
+<displayType>checkbox</displayType>
+<multiSelect>1</multiSelect>
+<name>tags</name>
+<number>1</number>
+<prettyName>Tags</prettyName>
+<relationalStorage>1</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<values></values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</tags>
+</class>
+<name>BBCode.Skin</name>
+<number>0</number>
+<className>XWiki.TagClass</className>
+<guid>609b3d90-36ec-4fef-9707-9c9afed01660</guid>
+<property>
+<tags/>
+</property>
+</object>
+<content></content>
+</xwikidoc>
