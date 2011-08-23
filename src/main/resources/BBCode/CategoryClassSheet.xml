@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>BBCode</web>
 <name>CategoryClassSheet</name>
@@ -12,14 +11,14 @@
 <customClass></customClass>
 <contentAuthor>XWiki.Admin</contentAuthor>
 <creationDate>1202764832000</creationDate>
-<date>1256130248000</date>
-<contentUpdateDate>1256130248000</contentUpdateDate>
+<date>1314091470000</date>
+<contentUpdateDate>1314091470000</contentUpdateDate>
 <version>1.2</version>
 <title></title>
 <template></template>
 <defaultTemplate></defaultTemplate>
 <validationScript></validationScript>
-<comment>Added object</comment>
+<comment></comment>
 <minorEdit>true</minorEdit>
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
@@ -34,6 +33,7 @@
 <nameField></nameField>
 <validationScript></validationScript>
 <defaultEditMode>
+<disabled>0</disabled>
 <name>defaultEditMode</name>
 <number>1</number>
 <prettyName>Default Edit Mode</prettyName>
@@ -62,14 +62,15 @@
 <validationScript></validationScript>
 <tags>
 <cache>0</cache>
-<displayType>checkbox</displayType>
+<disabled>0</disabled>
+<displayType>input</displayType>
 <multiSelect>1</multiSelect>
 <name>tags</name>
 <number>1</number>
 <prettyName>Tags</prettyName>
 <relationalStorage>1</relationalStorage>
-<separator> </separator>
-<separators> ,|</separators>
+<separator>|</separator>
+<separators>|,</separators>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
 <values></values>
@@ -95,7 +96,6 @@
 #set($class = $doc.getObject("BBCode.CategoryClass").xWikiClass)
 {{html clean="true" wiki="false"}}
   &lt;input type="hidden" name="parent" value="$parent" /&gt;
-  &lt;input type="hidden" name="title" value="$doctitle" /&gt;
   &lt;div class="bbbigbox"&gt;
   #if($context.action == 'inline')
     &lt;label for="BBCode.CategoryClass_0_categoryname"&gt;$msg.get("bb_enternamecategory")&lt;/label&gt;&lt;br /&gt; ##$doc.display('categoryname')
@@ -192,14 +192,17 @@
         &lt;a id="add-link" onclick="$('add-form').toggle();" href="#"&gt;$msg.get("bb_addnewtopic")...&lt;/a&gt;
       &lt;/div&gt;
       &lt;div id="add-form" style="display:none"&gt;
-        &lt;form action="" id="newdoc" method="get"&gt;
+        &lt;form action="$xwiki.getURL('BBCode.CreateCategory', 'view')" id="newdoc" method="post"&gt;
           &lt;input type="hidden" name="template" value="BBCode.TopicClassTemplate"/&gt;
           &lt;input type="hidden" name="sheet" value="1"/&gt;
           &lt;input type="hidden" name="parent" value="${doc.fullName}"&gt;
           &lt;input type="hidden" name="space" value="${doc.space}"&gt;
-          &lt;input type="text" name="topictitle"  size="40" onblur="if(this.value=='') this.value='$msg.get('bb_topictitle')'" onfocus="if(this.value=='$msg.get('bb_topictitle')') this.value=''" style="margin: auto;"  value="$msg.bb_topictitle"/&gt;
+          &lt;input type="hidden" name="xpage" value="plain"/&gt;
+          &lt;input type="hidden" name="outputSyntax" value="plain"/&gt;
+          &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" /&gt;
+$msg.bb_topic : &lt;input type="text" size="40" name="topictitle" class="withTip" value="$msg.bb_topictitle"/&gt;
           &lt;input type="hidden" name="nicetopictitle" value=""/&gt;
-          &lt;input type="button" value="$msg.bb_addthistopic" onclick='this.form.nicetopictitle.value = this.form.topictitle.value; if (updateName(this.form.topictitle)) {this.form.action="../../inline/" + this.form.space.value + "/" + this.form.topictitle.value; this.form.submit(); }'/&gt;
+          &lt;span class="buttonwrapper"&gt;&lt;input class="button" type="submit" value="$msg.bb_addthistopic"/&gt;&lt;/span&gt;
         &lt;/form&gt;
       &lt;/div&gt;
     #end
@@ -266,4 +269,5 @@
 #end
 &lt;/div&gt;
 {{/html}}
-{{/velocity}}</content></xwikidoc>
+{{/velocity}}
+</content></xwikidoc>
