@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>BBCode</web>
+<name>CreateCategory</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent></parent>
+<creator>XWiki.ttest3</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1312468824000</creationDate>
+<date>1314101569000</date>
+<contentUpdateDate>1314101569000</contentUpdateDate>
+<version>1.4</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>true</minorEdit>
+<syntaxId>xwiki/2.0</syntaxId>
+<hidden>false</hidden>
+<content>{{velocity}}
+#if($!request.xpage == 'plain' &amp;&amp; ("$!request.docName" != "" || "$!request.space" != "") &amp;&amp; "$!request.template" != "" &amp;&amp; "$!request.outputSyntax" == "plain")
+  #set($parent = $request.parent)
+  #if("$!request.docName" == "")
+    ## create a new bulletin board
+    #set($space = $request.space)
+    #set($name = "WebHome")
+  #else
+    ## create a category or a topic
+    #set($space = $request.space)
+    #set($name = "$!{request.docName}")
+  #end
+  #set($pageName = $xwiki.getUniquePageName($space, $name))
+  #set($title = $request.name)
+  #set($template = $request.template)
+  $response.sendRedirect($xwiki.getURL("${space}.${pageName}", 'inline', "parent=$!{parent}&amp;template=${template}&amp;title=$!{title}"))
+#end
+{{/velocity}}</content></xwikidoc>
