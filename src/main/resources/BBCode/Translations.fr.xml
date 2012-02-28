@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+<web>BBCode</web>
+<name>Translations</name>
+<language>fr</language>
+<defaultLanguage></defaultLanguage>
+<translation>1</translation>
+<parent></parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1317830868000</creationDate>
+<date>1320851098000</date>
+<contentUpdateDate>1320851098000</contentUpdateDate>
+<version>5.1</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment>Importé depuis un le XAR</comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/1.0</syntaxId>
+<hidden>false</hidden>
+<content>bb_bb=Forum
+bb_welcomebb=Bienvenue sur le forum de la DPIH !
+bb_currently=Il y a actuellement
+bb_thereis=Il y a
+bb_categoriessize=catégorie(s) dans ce forum.
+bb_category=Catégorie
+bb_categoryname=Nom de la catégorie
+
+bb_topic=Sujet
+bb_topics=Sujets
+bb_createdby=Créé par
+bb_lastmessageon=Dernier message le
+bb_inreplyto=En réponse à
+bb_by=Par
+bb_actions=Actions
+
+bb_nomessageyet=Pas encore de messages.
+bb_deletecategory=Supprimer cette catégorie
+bb_addnewcategory=Ajouter une nouvelle catégorie
+bb_nameofcategory=Nom de la catégorie
+bb_addcategory=Ajouter cette catégorie
+
+bb_enternamecategory=Veuillez entrer un nom pour cette catégorie :
+bb_enterdescriptioncategory=Veuillez entrer une description pour cette catégorie :
+bb_thereis=Il y a
+bb_topicsundercategory=sujet(s) renseignés dans cette catégorie.
+bb_deletethiscategory=Supprimer cette catégorie
+
+bb_reallydeletecategory=Voulez-vous vraiment supprimer cette catégorie ?
+bb_deletecategorydefinitely=CLIQUER ICI POUR SUPPRIMER CETTE CATEGORIE DEFINITIVEMENT
+bb_deleteddocs=Le(s) document(s) suivant(s) vont être supprimé(s) :
+bb_adminrightsrequired=Les droits d'administration sont nécessaires pour effectuer cette opération.
+bb_startedon=Démarré le
+
+bb_messages=Messages
+bb_lastauthor=Dernier auteur
+bb_lastpost=Dernier message
+bb_topicdelete=Supprimer ce sujet
+bb_addnewtopic=Ajouter un nouveau sujet
+
+bb_addthistopic=Ajouter ce sujet
+bb_topictitle=Titre du sujet
+bb_canceldeletion=ANNULER LA SUPPRESSION DE CETTE CATEGORIE
+bb_postforthe=Messages pour le
+bb_inthe=dans le
+
+bb_bbrssdescription=Nouveaux messages, sujets et catégories de ce forum.
+bb_categoryrssdescription=Ce flux liste toutes les modifications effectuées dans un des sujets de cette catégorie.
+bb_entertopictitle=Veuillez saisir un titre pour ce sujet :
+bb_entertopicdescription=Veuillez saisir une brève description pour ce sujet (optionnel) :
+bb_entertopiccontent=Vous pouvez être le premier à poster un message à ce sujet
+bb_cannotedittopic=Vous ne pouvez éditer un sujet à partir du moment ou vous avez décidé de le créer.
+
+bb_messagesintopic=message(s) dans ce sujet.
+bb_author=Auteur
+bb_postedon=Publié le
+bb_deletethistopic=supprimer ce sujet
+bb_deletethismessage=supprimer ce message
+
+bb_post=Publier
+bb_postmessage=Publier un message :
+bb_postyourmessage=Publiez votre message
+bb_administration=Administration des forums
+bb_welcomeadmin=Bienvenue dans l'administration des forums de la DPIH
+bb_bbsize=Forum(s) sur le site.
+
+bb_creationdate=Date de création
+bb_creator=Créateur
+bb_deletebb=Supprimer ce forum
+bb_titleofbb=Titre du forum
+bb_addnewbb=Ajouter un nouveau forum
+
+bb_addbb=Ajouter ce forum
+bb_bbs=BulletinBoard
+bb_deletethisbb=Supprimer ce forum
+bb_deletebbdefinitely=CLIQUEZ ICI POUR SUPPRIMER DEFINITIVEMENT CE FORUM
+bb_reallydeletebb=Voulez-vous réellement supprimer ce forum ?
+
+bb_entertitlebb=Veuillez saisir un titre pour le forum :
+bb_enterdescriptionbb=Veuillez saisir une description pour le forum :
+bb_cancelbbdeletion=ANNULER LA SUPPRESSION DE CE FORUM
+bb_infocreatenewbb=Votre nouveau forum sera créé dans son propre espace.
+bb_quotemessage=citer ce message
+
+bb_bbcodespace=Code de l'application Forum
+bb_bbcodespaceexplanation=All the code lines used in the Bulletin Board application are stored in this space. You can have access to various resources concerning your Bulletin Board application here. Be creful when editing those pages though :-)
+bb_examplebb=This Bulletin Board is included by default with the application to show how it works :
+bb_goexamplebb=Go to the example Bulletin Board
+bb_adminbbactions=Bulletin Board Administration
+
+bb_createnewbbs=Go to this page to create &amp; manage your bulletin boards :
+bb_adminbb=Bulletin Board Administration Page
+bb_changelookbbs=Go to this page to change the look &amp; feel of your Bulletin Board (CSS Experts only)
+bb_skinbbs=Bulletin Board Skin Page
+bb_changetranslationsbb=Go to this page to edit the languages resources of your Bulletin Board
+bb_translationsbb=Bulletin Board Translations Page
+
+bb_bbcode=List of code pages used by the Bulletin Board Application
+bb_bbrssfeeds=Pages used to create the Bulletin Board Application RSS Feeds
+bb_needloginmessage=Vous devez être authentifié pour pouvoir publier un nouveau message
+bb_needlogintopic=Vous devez être authentifié pour pouvoir ajouter un nouveau sujet.
+
+bb_apanelisavailable=A panel is available for your Bulletin Boards.
+bb_bbpanel=Go to the Bulletin Board Panel Page
+bb_usepanelwizard=You can use the Panel Wizard to display it.
+bb_gotopanelwizard=Go to the Panel Wizard
+
+bb_topictags=Sujet renseigné sous :
+bb_categorytags=Catégorie renseignée sous :
+bb_bbtags=Forum renseigné sous :
+bb_tagcloud=Nuage de balises
+bb_tag=Balise
+
+bb_tagresults=Résultats pour le
+bb_pagename=Titre de la page
+bb_pagetype=Type de page
+bb_editedon=édité le
+bb_backtobb=Revenir à la racine du forum
+bb_topiccategory=Catégorie du sujet:
+
+admin.puma=Administration PUMA
+puma_groupsMapping=Mapping des groupes
+puma_userMapping=Mapping des propriétés utilisateurs
+puma_fallback=Classe d'authentification en cas d'échec de l'authentification PUMA
+puma_userUidField=Champ à utiliser en tant que UID
+
+yes=oui
+no=non</content>
+</xwikidoc>
