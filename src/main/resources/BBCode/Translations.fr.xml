@@ -143,12 +143,6 @@ bb_editedon=édité le
 bb_backtobb=Revenir à la racine du forum
 bb_topiccategory=Catégorie du sujet:
 
-admin.puma=Administration PUMA
-puma_groupsMapping=Mapping des groupes
-puma_userMapping=Mapping des propriétés utilisateurs
-puma_fallback=Classe d'authentification en cas d'échec de l'authentification PUMA
-puma_userUidField=Champ à utiliser en tant que UID
-
-yes=oui
-no=non</content>
+bb_homepageTitle=Forum
+</content>
 </xwikidoc>

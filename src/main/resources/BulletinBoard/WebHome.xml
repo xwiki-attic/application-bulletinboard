@@ -11,14 +11,14 @@
 <customClass></customClass>
 <contentAuthor>XWiki.Admin</contentAuthor>
 <creationDate>1202770145000</creationDate>
-<date>1312553440000</date>
-<contentUpdateDate>1312553440000</contentUpdateDate>
+<date>1330518640000</date>
+<contentUpdateDate>1330518640000</contentUpdateDate>
 <version>1.1</version>
-<title>Bulletin Board</title>
+<title>$msg.get('bb_homepageTitle')</title>
 <template></template>
 <defaultTemplate></defaultTemplate>
 <validationScript></validationScript>
-<comment>Imported from XAR</comment>
+<comment></comment>
 <minorEdit>false</minorEdit>
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
@@ -67,7 +67,7 @@
 <name>BulletinBoard.WebHome</name>
 <number>0</number>
 <className>BBCode.BBClass</className>
-<guid>f079dc68-8959-400f-a59c-44e176eea4ba</guid>
+<guid>c28a250a-858c-488e-9135-1810913c4512</guid>
 <property>
 <bbdescription>Your Bulletin Board Description Here - Click on "Edit" to change me.</bbdescription>
 </property>
@@ -105,7 +105,7 @@
 <name>BulletinBoard.WebHome</name>
 <number>0</number>
 <className>XWiki.TagClass</className>
-<guid>c63b428b-2a35-4987-b226-29bff7f0a0d6</guid>
+<guid>fc2c569d-9f62-474a-88ba-20f605dbbbed</guid>
 <property>
 <tags/>
 </property>

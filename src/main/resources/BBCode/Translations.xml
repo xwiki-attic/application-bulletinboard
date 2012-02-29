@@ -175,4 +175,7 @@ bb_pagename=Page Title
 bb_pagetype=Page Type
 bb_editedon=Edited On
 bb_backtobb=Back to the Bulletin Board Home
-bb_topiccategory=Topic Category:</content></xwikidoc>
+bb_topiccategory=Topic Category:
+
+bb_homepageTitle=Bulletin Board
+</content></xwikidoc>
