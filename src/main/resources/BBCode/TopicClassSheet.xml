@@ -163,6 +163,8 @@ $xwiki.jsx.use("BBCode.Skin", {'defer' : false})
           &lt;a id="reply"&gt;&lt;/a&gt;
           &lt;span class="bbsmalltitle"&gt; &lt;a name=postmessage href="#postmessage"&gt; $msg.bb_postmessage &lt;/a&gt; &lt;/span&gt;
           &lt;form method="post" action="$doc.getURL("objectadd")" class="postreply"&gt;
+          ## CSRF prevention
+          &lt;input type="hidden" name="form_token" value="$!{services.csrf.getToken()}" /&gt;
           &lt;input type="hidden" name="xredirect" value="$doc.getURL()#$lastpostid" /&gt;
           &lt;input type="hidden" name="classname" value="BBCode.PostClass" /&gt;
           &lt;input type="hidden" name="BBCode.PostClass_postauthor" value="$context.user" /&gt;
