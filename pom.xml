@@ -36,9 +36,9 @@
   <version>1.3-SNAPSHOT</version>
   <description>Bulletin Board Application for XWiki</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-bulletinboard/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-bulletinboard/trunk/</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-bulletinboard/trunk/</url>
+    <connection>scm:git:git://github.com/xwiki-contrib/application-bulletinboard.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/application-bulletinboard.git</developerConnection>
+    <url>https://github.com/xwiki-contrib/application-bulletinboard</url>
   </scm>
   <distributionManagement>
     <repository>
