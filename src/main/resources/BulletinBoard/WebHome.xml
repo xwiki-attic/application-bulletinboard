@@ -1,113 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xwikidoc>
-<web>BulletinBoard</web>
-<name>WebHome</name>
-<language></language>
-<defaultLanguage>en</defaultLanguage>
-<translation>0</translation>
-<parent>BulletinBoard.WebHome</parent>
-<creator>XWiki.Admin</creator>
-<author>XWiki.Admin</author>
-<customClass></customClass>
-<contentAuthor>XWiki.Admin</contentAuthor>
-<creationDate>1202770145000</creationDate>
-<date>1330518640000</date>
-<contentUpdateDate>1330518640000</contentUpdateDate>
-<version>1.1</version>
-<title>$msg.get('bb_homepageTitle')</title>
-<template></template>
-<defaultTemplate></defaultTemplate>
-<validationScript></validationScript>
-<comment></comment>
-<minorEdit>false</minorEdit>
-<syntaxId>xwiki/2.0</syntaxId>
-<hidden>false</hidden>
-<object>
-<class>
-<name>BBCode.BBClass</name>
-<customClass></customClass>
-<customMapping></customMapping>
-<defaultViewSheet></defaultViewSheet>
-<defaultEditSheet></defaultEditSheet>
-<defaultWeb></defaultWeb>
-<nameField></nameField>
-<validationScript></validationScript>
-<bbdescription>
-<contenttype>FullyRenderedText</contenttype>
-<customDisplay></customDisplay>
-<disabled>0</disabled>
-<editor>Text</editor>
-<name>bbdescription</name>
-<number>2</number>
-<picker></picker>
-<prettyName>bbdescription</prettyName>
-<rows>2</rows>
-<size>50</size>
-<tooltip></tooltip>
-<unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
-<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
-</bbdescription>
-<bbtitle>
-<customDisplay></customDisplay>
-<disabled>0</disabled>
-<name>bbtitle</name>
-<number>1</number>
-<picker></picker>
-<prettyName>bbtitle</prettyName>
-<size>30</size>
-<tooltip></tooltip>
-<unmodifiable>0</unmodifiable>
-<validationMessage></validationMessage>
-<validationRegExp></validationRegExp>
-<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
-</bbtitle>
-</class>
-<name>BulletinBoard.WebHome</name>
-<number>0</number>
-<className>BBCode.BBClass</className>
-<guid>c28a250a-858c-488e-9135-1810913c4512</guid>
-<property>
-<bbdescription>Your Bulletin Board Description Here - Click on "Edit" to change me.</bbdescription>
-</property>
-<property>
-<bbtitle>Bulletin Board</bbtitle>
-</property>
-</object>
-<object>
-<class>
-<name>XWiki.TagClass</name>
-<customClass></customClass>
-<customMapping></customMapping>
-<defaultViewSheet></defaultViewSheet>
-<defaultEditSheet></defaultEditSheet>
-<defaultWeb></defaultWeb>
-<nameField></nameField>
-<validationScript></validationScript>
-<tags>
-<cache>0</cache>
-<disabled>0</disabled>
-<displayType>input</displayType>
-<multiSelect>1</multiSelect>
-<name>tags</name>
-<number>1</number>
-<prettyName>Tags</prettyName>
-<relationalStorage>1</relationalStorage>
-<separator>|</separator>
-<separators>|,</separators>
-<size>30</size>
-<unmodifiable>0</unmodifiable>
-<values></values>
-<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
-</tags>
-</class>
-<name>BulletinBoard.WebHome</name>
-<number>0</number>
-<className>XWiki.TagClass</className>
-<guid>fc2c569d-9f62-474a-88ba-20f605dbbbed</guid>
-<property>
-<tags/>
-</property>
-</object>
-<content>{{include document="BBCode.BBClassSheet"/}}</content></xwikidoc>
+  <web>BulletinBoard</web>
+  <name>WebHome</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <parent>BulletinBoard.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1202770145000</creationDate>
+  <date>1202770145000</date>
+  <contentUpdateDate>1202770145000</contentUpdateDate>
+  <version>1.1</version>
+  <title>$msg.get('bb_homepageTitle')</title>
+  <template/>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.0</syntaxId>
+  <hidden>false</hidden>
+  <object>
+    <class>
+      <name>BBCode.BBClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <bbdescription>
+        <contenttype>FullyRenderedText</contenttype>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <editor>Text</editor>
+        <name>bbdescription</name>
+        <number>2</number>
+        <picker/>
+        <prettyName>bbdescription</prettyName>
+        <rows>2</rows>
+        <size>50</size>
+        <tooltip/>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </bbdescription>
+      <bbtitle>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <name>bbtitle</name>
+        <number>1</number>
+        <picker/>
+        <prettyName>bbtitle</prettyName>
+        <size>30</size>
+        <tooltip/>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </bbtitle>
+    </class>
+    <name>BulletinBoard.WebHome</name>
+    <number>0</number>
+    <className>BBCode.BBClass</className>
+    <guid>f079dc68-8959-400f-a59c-44e176eea4ba</guid>
+    <property>
+      <bbdescription>Your Bulletin Board Description Here - Click on "Edit" to change me.</bbdescription>
+    </property>
+    <property>
+      <bbtitle>Bulletin Board</bbtitle>
+    </property>
+  </object>
+  <object>
+    <class>
+      <name>XWiki.TagClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <tags>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <multiSelect>1</multiSelect>
+        <name>tags</name>
+        <number>1</number>
+        <prettyName>Tags</prettyName>
+        <relationalStorage>1</relationalStorage>
+        <separator>|</separator>
+        <separators>|,</separators>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <values/>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </tags>
+    </class>
+    <name>BulletinBoard.WebHome</name>
+    <number>0</number>
+    <className>XWiki.TagClass</className>
+    <guid>c63b428b-2a35-4987-b226-29bff7f0a0d6</guid>
+    <property>
+      <tags/>
+    </property>
+  </object>
+  <object>
+    <class>
+      <name>XWiki.UIExtensionClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <content>
+        <disabled>0</disabled>
+        <name>content</name>
+        <number>3</number>
+        <prettyName>Extension Content</prettyName>
+        <rows>10</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </content>
+      <extensionPointId>
+        <disabled>0</disabled>
+        <name>extensionPointId</name>
+        <number>1</number>
+        <prettyName>Extension Point ID</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </extensionPointId>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>2</number>
+        <prettyName>Extension Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parameters>
+        <disabled>0</disabled>
+        <name>parameters</name>
+        <number>4</number>
+        <prettyName>Extension Parameters</prettyName>
+        <rows>10</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </parameters>
+    </class>
+    <name>BulletinBoard.WebHome</name>
+    <number>0</number>
+    <className>XWiki.UIExtensionClass</className>
+    <guid>236815fb-d60d-445a-ac0c-5e753ecf6241</guid>
+    <property>
+      <content/>
+    </property>
+    <property>
+      <extensionPointId>org.xwiki.platform.panels.Applications</extensionPointId>
+    </property>
+    <property>
+      <name>org.xwiki.platform.panels.Applications.BulletinBoard</name>
+    </property>
+    <property>
+      <parameters>label=$msg.get('bb_homepageTitle')
+target=BulletinBoard.WebHome
+icon=icon:user_comment</parameters>
+    </property>
+  </object>
+  <content>{{include document="BBCode.BBClassTemplate"/}}</content>
+</xwikidoc>
