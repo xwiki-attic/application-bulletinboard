@@ -11,9 +11,9 @@
   <author>xwiki:XWiki.Admin</author>
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <creationDate>1202765048000</creationDate>
-  <date>1314180999000</date>
-  <contentUpdateDate>1314180999000</contentUpdateDate>
+  <creationDate>1347259517000</creationDate>
+  <date>1347259675000</date>
+  <contentUpdateDate>1347259675000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <template/>
@@ -71,6 +71,7 @@ $xwiki.jsx.use("BBCode.Skin", {'defer' : false})
 #set($class = $doc.getObject("BBCode.TopicClass").xWikiClass)
 &lt;input type="hidden" name="title" value="" /&gt;
 &lt;input type="hidden" name="BBCode.PostClass_0_postauthor" value="$context.user" /&gt;
+&lt;input type="hidden" name="BBCode.PostClass_0_postdate" value="$datetool.get('yyyy/MM/dd HH:mm')"/&gt;
 &lt;div class="bbbigbox"&gt;
 {{/html}}
 
