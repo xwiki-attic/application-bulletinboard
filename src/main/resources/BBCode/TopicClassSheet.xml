@@ -125,35 +125,33 @@ $xwiki.jsx.use("BBCode.Skin", {'defer' : false})
     ##
     #foreach($item in $postclass)
       #set ($postauthor = $xwiki.getUserName($doc.display('postauthor', $item), true))
-      #if ($doc.getValue('postcontent', $item) != '')
-        &lt;tr class="#if($postindex % 2 == 0) evenpost #end"&gt;
-          &lt;td id="posttd"&gt; 
-            #set ($localpostauthor = $doc.display('postauthor', $item))
-            #set ($index = $localpostauthor.indexOf(":"))
-            #set ($index = $index + 1)
-            #set ($localpostauthor = $localpostauthor.substring($index))
-            &lt;div class="postauthor"&gt;$postauthor&lt;/div&gt;
-            &lt;div class="avatar"&gt;
-              &lt;a href="$xwiki.getURL($localpostauthor)"&gt;#useravatar($localpostauthor)&lt;/a&gt;&lt;br /&gt;
-            &lt;/div&gt;
-          &lt;/td&gt;
-          &lt;td id="posttd"&gt; &lt;div  id="message$item.number"&gt; 
-            &lt;textarea id="quotecontent$item.number" style="display:none"&gt;$item.getProperty("postcontent").getValue()&lt;/textarea&gt;
-            &lt;script type="text/javascript"&gt;
-               var quote$item.number = XWiki.bulletinboard.addQuote($("quotecontent$item.number").value, "$xwiki.getLocalUserName($doc.display('postauthor', $item), false)", "$doc.display('postdate', $item)");
-            &lt;/script&gt;
-            &lt;span class="bbdatatext"&gt;$msg.bb_postedon $doc.display('postdate', $item) - &lt;a name=$velocityCount href="#$velocityCount"&gt;&lt;img src="$xwiki.getSkinFile("icons/silk/link_go.gif")" title="Direct link to post #$velocityCount" /&gt;&lt;/a&gt; - &lt;a href="#" onclick="XWiki.bulletinboard.insertInReply(XWiki.bulletinboard.getQuote(quote$item.number)); XWiki.bulletinboard.jumpToReply(); return false;"&gt;&lt;img src="$xwiki.getSkinFile("icons/silk/comment_add.gif")" title="Quote this message" /&gt;&lt;/a&gt; #if(($context.user == $doc.display('postauthor', $item) || $xwiki.hasAdminRights() == 'true') &amp;&amp; $velocityCount &gt; 1) - &lt;a href="$doc.getURL("objectremove", "classname=BBCode.PostClass&amp;amp;classid=${item.number}&amp;amp;form_token=$!{services.csrf.getToken()}&amp;amp;xredirect=${request.getRequestURL()}")"&gt;&lt;img src="$xwiki.getSkinFile("icons/silk/bin.gif")" title="$msg.bb_deletethismessage" /&gt;&lt;/a&gt; #end &lt;/span&gt;
-            &lt;div class="postcontent"&gt;
-            {{/html}}
-
-              $doc.display('postcontent', $item)
-
-            {{html clean="false"}}
-            &lt;/div&gt;
+      &lt;tr class="#if($postindex % 2 == 0) evenpost #end"&gt;
+        &lt;td id="posttd"&gt; 
+          #set ($localpostauthor = $doc.display('postauthor', $item))
+          #set ($index = $localpostauthor.indexOf(":"))
+          #set ($index = $index + 1)
+          #set ($localpostauthor = $localpostauthor.substring($index))
+          &lt;div class="postauthor"&gt;$postauthor&lt;/div&gt;
+          &lt;div class="avatar"&gt;
+            &lt;a href="$xwiki.getURL($localpostauthor)"&gt;#useravatar($localpostauthor)&lt;/a&gt;&lt;br /&gt;
           &lt;/div&gt;
-          &lt;/td&gt;
-        &lt;/tr&gt;
-      #end      
+        &lt;/td&gt;
+        &lt;td id="posttd"&gt; &lt;div  id="message$item.number"&gt; 
+          &lt;textarea id="quotecontent$item.number" style="display:none"&gt;$item.getProperty("postcontent").getValue()&lt;/textarea&gt;
+          &lt;script type="text/javascript"&gt;
+             var quote$item.number = XWiki.bulletinboard.addQuote($("quotecontent$item.number").value, "$xwiki.getLocalUserName($doc.display('postauthor', $item), false)", "$doc.display('postdate', $item)");
+          &lt;/script&gt;
+          &lt;span class="bbdatatext"&gt;$msg.bb_postedon $doc.display('postdate', $item) - &lt;a name=$velocityCount href="#$velocityCount"&gt;&lt;img src="$xwiki.getSkinFile("icons/silk/link_go.gif")" title="Direct link to post #$velocityCount" /&gt;&lt;/a&gt; - &lt;a href="#" onclick="XWiki.bulletinboard.insertInReply(XWiki.bulletinboard.getQuote(quote$item.number)); XWiki.bulletinboard.jumpToReply(); return false;"&gt;&lt;img src="$xwiki.getSkinFile("icons/silk/comment_add.gif")" title="Quote this message" /&gt;&lt;/a&gt; #if(($context.user == $doc.display('postauthor', $item) || $xwiki.hasAdminRights() == 'true') &amp;&amp; $velocityCount &gt; 1) - &lt;a href="$doc.getURL("objectremove", "classname=BBCode.PostClass&amp;amp;classid=${item.number}&amp;amp;form_token=$!{services.csrf.getToken()}&amp;amp;xredirect=${request.getRequestURL()}")"&gt;&lt;img src="$xwiki.getSkinFile("icons/silk/bin.gif")" title="$msg.bb_deletethismessage" /&gt;&lt;/a&gt; #end &lt;/span&gt;
+          &lt;div class="postcontent"&gt;
+          {{/html}}
+
+            $doc.display('postcontent', $item)
+
+          {{html clean="false"}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+       &lt;/td&gt;
+      &lt;/tr&gt;
     #end
     &lt;tr&gt;
       &lt;td&gt; &amp;nbsp; &lt;/td&gt;
