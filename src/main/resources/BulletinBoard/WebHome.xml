@@ -171,7 +171,7 @@
       <extensionPointId>org.xwiki.platform.panels.Applications</extensionPointId>
     </property>
     <property>
-      <name>org.xwiki.platform.panels.Applications.BulletinBoard</name>
+      <name>platform.panels.bulletinBoardApplication</name>
     </property>
     <property>
       <parameters>label=$msg.get('bb_homepageTitle')
