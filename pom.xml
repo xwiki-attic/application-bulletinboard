@@ -33,7 +33,7 @@
   <artifactId>xwiki-application-bulletinboard</artifactId>
   <packaging>xar</packaging>
   <name>Contrib - Applications - BulletinBoard</name>
-  <version>1.5</version>
+  <version>1.6-SNAPSHOT</version>
   <description>Bulletin Board Application for XWiki</description>
   <scm>
     <connection>scm:git:git://github.com/xwiki-contrib/application-bulletinboard.git</connection>
