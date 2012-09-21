@@ -32,9 +32,15 @@
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>xwiki-application-bulletinboard</artifactId>
   <packaging>xar</packaging>
-  <name>Contrib - Applications - BulletinBoard</name>
+  <name>Bulletin Board Application</name>
   <version>1.6-SNAPSHOT</version>
-  <description>Bulletin Board Application for XWiki</description>
+  <description>Provides XWiki users with a basic yet effective Bulletin Board (Forum) feature</description>
+  <developers>
+    <developer>
+      <name>Guillaume Lerouge</name>
+      <name>Oana Tabaranu</name>
+    </developer>
+  </developers>
   <scm>
     <connection>scm:git:git://github.com/xwiki-contrib/application-bulletinboard.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-bulletinboard.git</developerConnection>
