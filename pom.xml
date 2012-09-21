@@ -33,7 +33,7 @@
   <artifactId>xwiki-application-bulletinboard</artifactId>
   <packaging>xar</packaging>
   <name>Bulletin Board Application</name>
-  <version>1.6</version>
+  <version>1.7-SNAPSHOT</version>
   <description>Provides XWiki users with a basic yet effective Bulletin Board (Forum) feature</description>
   <developers>
     <developer>
