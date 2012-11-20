@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
-  <web>BBCode</web>
-  <name>Translations</name>
-  <language>fr</language>
-  <defaultLanguage/>
-  <translation>1</translation>
-  <parent>BBCode.WebHome</parent>
-  <creator>xwiki:XWiki.Admin</creator>
-  <author>xwiki:XWiki.Admin</author>
-  <customClass/>
-  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <creationDate>1317830868000</creationDate>
-  <date>1320851098000</date>
-  <contentUpdateDate>1320851098000</contentUpdateDate>
-  <version>1.1</version>
-  <title/>
-  <template/>
-  <defaultTemplate/>
-  <validationScript/>
-  <comment/>
-  <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/1.0</syntaxId>
-  <hidden>true</hidden>
-  <content>bb_bb=Forum
+<web>BBCode</web>
+<name>Translations</name>
+<language>fr</language>
+<defaultLanguage></defaultLanguage>
+<translation>1</translation>
+<parent>BBCode.WebHome</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1317830868000</creationDate>
+<date>1353403649000</date>
+<contentUpdateDate>1353403649000</contentUpdateDate>
+<version>4.1</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/1.0</syntaxId>
+<hidden>true</hidden>
+<content>bb_bb=Forum
 bb_welcomebb=Bienvenue sur votre forum !
 bb_currently=Il y a actuellement
 bb_thereis=Il y a
@@ -108,27 +107,27 @@ bb_infocreatenewbb=Votre nouveau forum sera créé dans son propre espace.
 bb_quotemessage=citer ce message
 
 bb_bbcodespace=Code de l'application Forum
-bb_bbcodespaceexplanation=All the code lines used in the Bulletin Board application are stored in this space. You can have access to various resources concerning your Bulletin Board application here. Be creful when editing those pages though :-)
-bb_examplebb=This Bulletin Board is included by default with the application to show how it works :
-bb_goexamplebb=Go to the example Bulletin Board
-bb_adminbbactions=Bulletin Board Administration
+bb_bbcodespaceexplanation=Toutes les lignes de code utilisées dans cette application Forum sont stockées dans cet espace. Vous pouvez ici accéder à de multiples ressources concernant l'application Forum. Restez prudent si vous éditez ces pages :-)
+bb_examplebb=Ce Forum est inclus par défaut dans l'application pour en montrer le fonctionnement :
+bb_goexamplebb=Aller au Forum d'exemple
+bb_adminbbactions=Administration du Forum
 
-bb_createnewbbs=Go to this page to create &amp; manage your bulletin boards :
-bb_adminbb=Bulletin Board Administration Page
-bb_changelookbbs=Go to this page to change the look &amp; feel of your Bulletin Board (CSS Experts only)
-bb_skinbbs=Bulletin Board Skin Page
-bb_changetranslationsbb=Go to this page to edit the languages resources of your Bulletin Board
-bb_translationsbb=Bulletin Board Translations Page
+bb_createnewbbs=Aller à cette page pour créer et gérer vos forums :
+bb_adminbb=Page d'administration du Forum
+bb_changelookbbs=Aller à cette page pour changer l'apparence de votre Forum (pour les experts du CSS uniquement)
+bb_skinbbs=Skin Page du Forum
+bb_changetranslationsbb=Aller à cette page pour éditer les languages de votre Forum
+bb_translationsbb=Page de traduction du Forum
 
-bb_bbcode=List of code pages used by the Bulletin Board Application
-bb_bbrssfeeds=Pages used to create the Bulletin Board Application RSS Feeds
+bb_bbcode=Liste des pages de code utilisées par l'application Forum
+bb_bbrssfeeds=Pages utilisées pour créer le flux RSS du Forum
 bb_needloginmessage=Vous devez être authentifié pour pouvoir publier un nouveau message
 bb_needlogintopic=Vous devez être authentifié pour pouvoir ajouter un nouveau sujet.
 
-bb_apanelisavailable=A panel is available for your Bulletin Boards.
-bb_bbpanel=Go to the Bulletin Board Panel Page
-bb_usepanelwizard=You can use the Panel Wizard to display it.
-bb_gotopanelwizard=Go to the Panel Wizard
+bb_apanelisavailable=Un panel est disponible pour votre Forum.
+bb_bbpanel=Aller à la page du panel du Forum
+bb_usepanelwizard=Vous pouvez utiliser l'organiseur de panels pour l'affiche.
+bb_gotopanelwizard=Aller à l'organiseur de panels
 
 bb_topictags=Sujet renseigné sous :
 bb_categorytags=Catégorie renseignée sous :
@@ -144,5 +143,4 @@ bb_backtobb=Revenir à la racine du forum
 bb_topiccategory=Catégorie du sujet:
 
 bb_homepageTitle=Forum
-</content>
-</xwikidoc>
+</content></xwikidoc>
