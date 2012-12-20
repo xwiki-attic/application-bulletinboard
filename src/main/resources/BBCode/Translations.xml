@@ -142,7 +142,7 @@ bb_inthe=in the
 bb_bbrssdescription=New posts, topics and categories from this bulletin board.
 bb_categoryrssdescription=This feeds lists every modification made to one of this category's topics.
 bb_entertopictitle=Please enter a title for this topic:
-bb_entertopicdescription=Please enter a quick description of this topic (optional) :
+bb_entertopicdescription=Please enter a quick description of this topic (optional):
 bb_entertopiccontent=You can be the first to post a message on this topic:
 bb_cannotedittopic=You cannot edit a topic once you have chosen to create it.
 
@@ -178,12 +178,12 @@ bb_infocreatenewbb=Your new bulletin board will be created in its own space.
 bb_quotemessage=quote this message
 
 bb_bbcodespace=Bulletin Board Application Code
-bb_bbcodespaceexplanation=All the code lines used in the Bulletin Board application are stored in this space. You can have access to various resources concerning your Bulletin Board application here. Be creful when editing those pages though :-)
+bb_bbcodespaceexplanation=All the code lines used in the Bulletin Board application are stored in this space. You can have access to various resources concerning your Bulletin Board application here. Be careful when editing those pages though :-)
 bb_examplebb=This Bulletin Board is included by default with the application to show how it works :
 bb_goexamplebb=Go to the example Bulletin Board
 bb_adminbbactions=Bulletin Board Administration
 
-bb_createnewbbs=Go to this page to create &amp; manage your bulletin boards :
+bb_createnewbbs=Go to this page to create &amp; manage your bulletin boards:
 bb_adminbb=Bulletin Board Administration Page
 bb_changelookbbs=Go to this page to change the look &amp; feel of your Bulletin Board (CSS Experts only)
 bb_skinbbs=Bulletin Board Skin Page
@@ -214,5 +214,5 @@ bb_backtobb=Back to the Bulletin Board Home
 bb_topiccategory=Topic Category:
 
 bb_homepageTitle=Bulletin Board
-bb_description=Your Bulletin Board Description Here - Click on "Edit" to change me.</content>
+bb_defaultdescription=Your Bulletin Board Description Here - Click on "Edit" to change me.</content>
 </xwikidoc>
