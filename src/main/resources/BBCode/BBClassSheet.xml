@@ -12,8 +12,8 @@
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1203460060000</creationDate>
-  <date>1314101149000</date>
-  <contentUpdateDate>1314101149000</contentUpdateDate>
+  <date>1353517499000</date>
+  <contentUpdateDate>1353517499000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <template/>
@@ -153,7 +153,11 @@
 ##&lt;span class="bbbigtitle"&gt;Forum&lt;/span&gt;
   #if($doc.getObject('BBCode.BBClass'))
     &lt;div class="bulletin-description"&gt;
+    #if($doc.getValue('bbdescription', $doc.getObject('BBCode.BBClass'))=='')
+      $msg.get("bb_defaultdescription")
+    #else
       $doc.getValue('bbdescription', $doc.getObject('BBCode.BBClass'))
+    #end
     &lt;/div&gt;
   #end
   &lt;br/&gt;

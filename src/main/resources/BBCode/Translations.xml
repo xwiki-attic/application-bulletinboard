@@ -12,8 +12,8 @@
   <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1203277732000</creationDate>
-  <date>1353403278000</date>
-  <contentUpdateDate>1353403278000</contentUpdateDate>
+  <date>1353517553000</date>
+  <contentUpdateDate>1353517553000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <template/>
@@ -214,5 +214,5 @@ bb_backtobb=Back to the Bulletin Board Home
 bb_topiccategory=Topic Category:
 
 bb_homepageTitle=Bulletin Board
-</content>
+bb_description=Your Bulletin Board Description Here - Click on "Edit" to change me.</content>
 </xwikidoc>
